@@ -1,13 +1,13 @@
 import java.util.Date;
 
-public class TourDone {
+public class RegisteredUsers {
     private User userID;
     private Tour tourID;
     private boolean paymentstatus;
     private Date paymentdate;
     private Manager managerID;
 
-    public TourDone(User user,Tour tour , boolean paymentstatus , Date paymentdate , Manager managerID) {
+    public RegisteredUsers(User user, Tour tour , boolean paymentstatus , Date paymentdate , Manager managerID) {
         this.userID = user;
         this.tourID = tour;
         this.paymentstatus=paymentstatus;

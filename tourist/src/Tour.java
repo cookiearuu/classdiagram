@@ -2,7 +2,7 @@ import java.sql.Time;
 import java.util.Date;
 
 public class Tour {
-    private  int tourID;
+    public int tourID;
     private String place;
     private float price;
     private Date date;
@@ -13,9 +13,12 @@ public class Tour {
     private boolean food;
     private boolean water;
 
+    public Tour() {
+    }
+
     public Tour(int tourID, String place,
                 float price , Date date , Address address,
-                Time time , boolean status,String about, boolean food ,boolean water) {
+                Time time , boolean status, String about, boolean food , boolean water) {
         this.tourID = tourID;
         this.place=place;
         this.price=price;
