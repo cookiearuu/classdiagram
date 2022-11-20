@@ -7,7 +7,6 @@ public class Tour {
     private float price;
     private Date date;
     private Address address;
-    private Time time;
     private  boolean status ;
     private String about;
     private boolean food;
@@ -17,14 +16,12 @@ public class Tour {
     }
 
     public Tour(int tourID, String place,
-                float price , Date date , Address address,
-                Time time , boolean status, String about, boolean food , boolean water) {
+                float price , Date date , Address address, boolean status, String about, boolean food , boolean water) {
         this.tourID = tourID;
         this.place=place;
         this.price=price;
         this.date=date;
         this.address=address;
-        this.time=time;
         this.status=status;
         this.about=about;
         this.food=food;
@@ -96,13 +93,6 @@ public class Tour {
         this.status = status;
     }
 
-    public Time getTime() {
-        return time;
-    }
-
-    public void setTime(Time time) {
-        this.time = time;
-    }
 
     public boolean isWater() {
         return water;

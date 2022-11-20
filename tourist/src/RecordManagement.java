@@ -3,11 +3,26 @@ import java.util.Scanner;
 
 public class RecordManagement {
     public LinkedList<User> list;
-
+    public  FindUser f;
     public RecordManagement() {
         list  =new LinkedList<>();
     }
 
+
+    public RecordManagement(FindUser f){
+        this.f = f;
+
+    }
+
+
+
+    public FindUser getF(FindUser f) {
+        return f;
+    }
+
+    public void setF(FindUser f) {
+        this.f = f;
+    }
 
     public void delete(int idNumber) {
         User userDel = null;
