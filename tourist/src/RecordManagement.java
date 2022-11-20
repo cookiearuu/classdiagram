@@ -1,78 +1,12 @@
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class User {
-    private int userID;
-    private String name ;
-    private String last_name ;
-    private String email;
-    private int phone_number;
-    public Address address;
+public class RecordManagement {
     public LinkedList<User> list;
 
-
-    public User(Address address,int userID , String name ,
-                String last_name ,String email , int phone_number) {
-        this.address = address;
-        this.userID = userID;
-        this.name = name ;
-        this.last_name=last_name;
-        this.email = email;
+    public RecordManagement() {
+        list  =new LinkedList<>();
     }
-
-    public User() {
-        list = new LinkedList<>();
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getLast_name() {
-        return last_name;
-    }
-
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getPhone_number() {
-        return phone_number;
-    }
-
-    public void setPhone_number(int phone_number) {
-        this.phone_number = phone_number;
-    }
-
-    public int getUserID() {
-        return userID;
-    }
-
-    public void setUserID(int userID) {
-        this.userID = userID;
-    }
-
-
 
 
     public void delete(int idNumber) {
@@ -122,7 +56,7 @@ public class User {
     }
 
     public void update(int id, Scanner input) {
-        if (!find(id)) {
+        if (find(id)) {
             User u = findUser(id);
             System.out.println("User ID>>>");
             int idNumber = input.nextInt();
@@ -170,21 +104,13 @@ public class User {
         }
     }
 
-    public void setAddress(String city, String district, String street, int house, int flat) {
-        this.address= new Address(city,district,street,house,flat);
-
+    public void display(){
+        if(list.isEmpty()){
+            System.out.println("the list has no records");
+        }
+        for(User u: list){
+            System.out.println(u.toString());
+        }
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "userID=" + userID +
-                ", name='" + name + '\'' +
-                ", last_name='" + last_name + '\'' +
-                ", email='" + email + '\'' +
-                ", phone_number=" + phone_number +
-                ", address=" + address +
-                ", list=" + list +
-                '}';
-    }
 }

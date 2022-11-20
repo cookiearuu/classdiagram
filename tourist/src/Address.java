@@ -3,13 +3,13 @@ public class Address {
     public String district;
     public String street;
     public int house;
-    public char flat;
+    public int flat;
 
     public Address() {
         super();
     }
 
-    public Address(String city,String district , String street , int house , char flat) {
+    public Address(String city,String district , String street , int house , int flat) {
         this.city = city;
         this.district= district;
         this.street = street;
@@ -33,11 +33,11 @@ public class Address {
         this.district = district;
     }
 
-    public char getFlat() {
+    public int getFlat() {
         return flat;
     }
 
-    public void setFlat(char flat) {
+    public void setFlat(int flat) {
         this.flat = flat;
     }
 

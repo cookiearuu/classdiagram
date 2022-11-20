@@ -3,7 +3,10 @@ public class Feedback {
     public User user;
     public Tour tourID;
 
-    public Feedback(String comment,User user , Tour tourID) {
+    public Feedback() {
+    }
+
+    public Feedback(String comment, User user , Tour tourID) {
         this.comment = comment;
         this.tourID=tourID;
         this.user = user;
